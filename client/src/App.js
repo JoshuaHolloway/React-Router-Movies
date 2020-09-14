@@ -42,7 +42,7 @@ export default function App () {
     <div>
 
       <Link to='/'>Home</Link>
-      <Link to='/route-1'>Link-1</Link>
+      <Link to='/movies/1'>Link-1</Link>
 
       
 
@@ -51,11 +51,14 @@ export default function App () {
       
 
      {/* <div>Replace this Div with your Routes</div> */}
-      <Route path='/'>
+      <Route exact path='/'>
         <MovieList movies={movieList} title={''} director={''} metascore={''}/>
       </Route>
 
-      <Route path='/route-1'>
+      <Route path='/movies/:id' render={props => {
+        const { id } = props.match.params;
+        console.log('id: ', id);
+      }}>
       </Route>
 
     </div>

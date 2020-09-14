@@ -6,13 +6,6 @@ Once you are done your application will have two routes:
 * [ ] [Screenshot of route '/movies/:id'](https://tk-assets.lambdaschool.com/06f9f448-2804-4b4a-9408-41904af96a4e_second-route.png)
 
 #### Set up Routes
-
-  * [ ] 
-    - one route for `/` that loads the `MovieList` component. 
-    - This component will need the movies injected into it via props.
-
-
-
   * [ ] one route that will take an `id` parameter after`/movies/` (ex: `/movies/2`, `/movies/3` where the id is dynamic). This route should load the `Movie` component.
 
 #### Add Functionality
@@ -22,15 +15,8 @@ Once you are done your application will have two routes:
 * [ ] Add functionality so the `Home` button on the `SavedList` component navigates back to home.
 * [ ] You should now be able to navigate back and forth between the list of movies and the detailed view of a single movie.
 
-### Task 2b: Exit Ticket
-
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/2Ns5Lre6aMBcCtPEq/wdQFNfsdiY5b3T).
-
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
 ### Task 3: Stretch Goals
-
-If you have completed Parts 1 & 2 feel free to move on to these stretch goals.
 
 #### Refactor so that our code is DRY
 
@@ -49,8 +35,3 @@ If you have completed Parts 1 & 2 feel free to move on to these stretch goals.
 #### Turn your Saved Movie `Link`s into `NavLink`s
 
 * [ ] Navlink
-
-## Submission Format
-
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
