@@ -30,9 +30,23 @@ export default function App () {
 
   return (
     <div>
+
+      <Link to='/'>Home</Link>
+      <Link to='/route-1'>Link-1</Link>
+
+      
+
+
+
       <SavedList list={[ /* This is stretch */]} />
 
-      <div>Replace this Div with your Routes</div>
+     {/* <div>Replace this Div with your Routes</div> */}
+      <Route path='/'>
+      </Route>
+
+      <Route path='/route-1'>
+      </Route>
+
     </div>
   );
 }
