@@ -53,7 +53,7 @@ export default function App () {
 
      {/* <div>Replace this Div with your Routes</div> */}
       <Route exact path='/'>
-        <MovieList movies={movieList} title={''} director={''} metascore={''}/>
+        <MovieList movies={movieList} title={''} director={''} metascore={''} />
       </Route>
 
       <Route path='/movies/:id' render={props => {

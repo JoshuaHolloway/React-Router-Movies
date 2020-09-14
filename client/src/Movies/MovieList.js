@@ -15,7 +15,13 @@ function MovieDetails(props) {
   const { title, director, metascore } = props.movie;
 
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={ () => {
+          console.log('clicked!');
+          console.log('clicked!');
+          console.log('clicked!');
+      } }>
+
+
       <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
