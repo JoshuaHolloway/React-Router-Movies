@@ -8,22 +8,11 @@ export default function Movie(props) {
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
 
   useEffect(() => {
-
-    console.log('Inside Movie.js useEffect():');
-
     axios
       .get(`http://localhost:5000/api/movies/${id}`) // Study this endpoint with Postman
       .then(response => {
         // Study this response with a breakpoint or log statements
         // and set the response data as the 'movie' slice of state
-
-
-        const movie = response.data;
-        console.log('movie: ', movie);
-
-        // Set the response data as the 'movie' slice of state:
-        setMovie(movie);
-
       })
       .catch(error => {
         console.error(error);
