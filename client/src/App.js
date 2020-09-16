@@ -44,6 +44,8 @@ export default function App () {
         <MovieList movies={movieList}></MovieList>
       </Route>
 
+      {/* How do I get the movie ID here? */}
+
       <Route path='/movies/:id' render={props => {}}>
         <Movie id={1}></Movie>
       </Route>
