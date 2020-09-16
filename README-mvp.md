@@ -1,19 +1,10 @@
-# Client Side Routing w/ React Router v.5
-
-Topics:
-
 * React Router
 * Using Link and NavLink to navigate to specific routes
 * Passing Route Parameters
 * Passing props to components rendered by the Router
 
-## Instructions
-
-### Task 2a: MVP
-
 #### Set up Routes
 
-  * [ ] one route for `/` that loads the `MovieList` component. This component will need the movies injected into it via props.
   * [ ] one route that will take an `id` parameter after`/movies/` (ex: `/movies/2`, `/movies/3` where the id is dynamic). This route should load the `Movie` component.
 
 #### Add Functionality
