@@ -29,16 +29,13 @@ export default function App () {
     getMovies();
   }, []);
 
-  // Stretch:
-  const addToSavedList = id => {
-    /* This is stretch. Prevent the same movie from being "saved" more than once */
-  };
-
   return (
     <div>
-      <Link to='/'>Home</Link>
+      <Link to='/'>
+        <div className="home-button">Home</div>
+      </Link>
 
-      <SavedList list={[ /* This is stretch */]} />
+      <SavedList list={saved} />
 
       <Route exact path='/'>
         <MovieList movies={movieList}></MovieList>
@@ -47,7 +44,7 @@ export default function App () {
       {/* How do I get the movie ID here? */}
 
       <Route path='/movies/:id' render={props => {}}>
-        <Movie id={1}></Movie>
+        <Movie saved={saved} setSaved={setSaved}></Movie>
       </Route>
     </div>
   );
