@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Link } from 'react-router-dom';
+
 import axios from 'axios';
 
+// Components
+import MovieList from './Movies/MovieList';
 import SavedList from './Movies/SavedList';
+import Movie from './Movies/Movie';
 
 export default function App () {
   const [saved, setSaved] = useState([]); // Stretch: the ids of "saved" movies
@@ -10,10 +15,12 @@ export default function App () {
   useEffect(() => {
     const getMovies = () => {
       axios
-        .get('http://localhost:5000/api/movies') // Study this endpoint with Postman
+        .get('http://localhost:5000/api/movies')
         .then(response => {
-          // Study this response with a breakpoint or log statements
-          // and set the response data as the 'movieList' slice of state
+          // response.data is the array of movies
+          const movies = response.data;
+          // console.log('movies: ', movies);
+          setMovieList(movies); // set state
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -22,15 +29,23 @@ export default function App () {
     getMovies();
   }, []);
 
-  const addToSavedList = id => {
-    // This is stretch. Prevent the same movie from being "saved" more than once
-  };
-
   return (
     <div>
-      <SavedList list={[ /* This is stretch */]} />
+      <Link to='/'>
+        <div className="home-button">Home</div>
+      </Link>
 
-      <div>Replace this Div with your Routes</div>
+      <SavedList list={saved} />
+
+      <Route exact path='/'>
+        <MovieList movies={movieList}></MovieList>
+      </Route>
+
+      {/* How do I get the movie ID here? */}
+
+      <Route path='/movies/:id' render={props => {}}>
+        <Movie saved={saved} setSaved={setSaved}></Movie>
+      </Route>
     </div>
   );
 }
